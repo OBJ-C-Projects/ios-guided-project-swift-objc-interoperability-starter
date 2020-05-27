@@ -8,7 +8,10 @@
 
 import Foundation
 
-class Contacts {
+//1. Use a class because Object-c does not have an equivalent Struct
+//2.Subclass from NSObject
+
+class Contact: NSObject {
     var name: String
     var relationship: String?
     
