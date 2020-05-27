@@ -7,6 +7,8 @@
 //
 
 #import "FGTContactController.h"
+//For spaces and dashes use "_" 
+#import "Contacts_Hybrid-Swift.h"
 
 @implementation FGTContactController
 
@@ -17,8 +19,12 @@
 @synthesize contacts = _contacts;
 //Lazy init
 - (NSArray<Contact *> *)contacts {
-    if(!_contacts){//In nil then initialize it
-        _contacts = [[NSArray alloc] init];
+    if(!_contacts){//If nil then initialize it
+//        _contacts = [[NSArray alloc] init];
+        _contacts = @[
+        [[Contact alloc] initWithName:@"Fritz" relationship:@"Father"],
+        [[Contact alloc] initWithName:@"Kristen" relationship:@"Dauther"]
+        ];
     }
     return _contacts;
 };

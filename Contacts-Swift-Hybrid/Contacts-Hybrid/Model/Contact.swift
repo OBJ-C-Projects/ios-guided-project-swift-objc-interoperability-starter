@@ -12,10 +12,10 @@ import Foundation
 //2.Subclass from NSObject
 
 class Contact: NSObject {
-    var name: String
-    var relationship: String?
+    @objc var name: String
+    @objc var relationship: String?
     
-    init(name: String, relationship: String?) {
+    @objc init(name: String, relationship: String?) {
         self.name = name
         self.relationship = relationship
     }

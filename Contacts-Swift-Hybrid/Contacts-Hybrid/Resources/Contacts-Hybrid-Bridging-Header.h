@@ -3,4 +3,4 @@
 //
 
 //Add all the OBJ-C files we want to expose to Swift
-#include "FGTContactController.h"
+#import "FGTContactController.h"
