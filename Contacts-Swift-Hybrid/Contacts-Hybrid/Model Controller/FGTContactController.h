@@ -11,7 +11,7 @@
 @class FGTContact;
 
 //Commented out to explicitly declare optional/null
-//NS_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 //We can rename Objc class to match swift
 NS_SWIFT_NAME(ContactController)
@@ -23,8 +23,8 @@ NS_SWIFT_NAME(ContactController)
 //null_resettable   [Contact]?
 //null_unspecified* [Contact]!
 
-@property (nonatomic, readonly, nullable) NSArray<FGTContact *> *contacts;//Default to nil
+@property (nonatomic, readonly) NSArray<FGTContact *> *contacts;//Default to nil
 
 @end
 
-//NS_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
