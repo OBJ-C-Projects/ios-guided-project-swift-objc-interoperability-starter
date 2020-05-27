@@ -18,12 +18,13 @@
 //Getter
 @synthesize contacts = _contacts;
 //Lazy init
-- (NSArray<Contact *> *)contacts {
+- (NSArray<FGTContact *> *)contacts {
     if(!_contacts){//If nil then initialize it
 //        _contacts = [[NSArray alloc] init];
+        //Init with some dummy data
         _contacts = @[
-        [[Contact alloc] initWithName:@"Fritz" relationship:@"Father"],
-        [[Contact alloc] initWithName:@"Kristen" relationship:@"Dauther"]
+        [[FGTContact alloc] initWithName:@"Fritz" relationship:@"Father"],
+        [[FGTContact alloc] initWithName:@"Kristen" relationship:@"Dauther"]
         ];
     }
     return _contacts;

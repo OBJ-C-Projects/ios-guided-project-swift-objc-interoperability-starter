@@ -11,6 +11,9 @@ import Foundation
 //1. Use a class because Object-c does not have an equivalent Struct
 //2.Subclass from NSObject
 
+//We can rename class, properties and methods using:
+//@objc(newName)
+@objc(FGTContact)
 class Contact: NSObject {
     @objc var name: String
     @objc var relationship: String?

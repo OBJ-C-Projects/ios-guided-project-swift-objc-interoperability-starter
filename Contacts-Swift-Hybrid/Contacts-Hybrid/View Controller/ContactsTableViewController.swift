@@ -12,7 +12,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 	
     
-    var contactController = FGTContactController()
+    var contactController = ContactController()
     
     
 	override func viewDidLoad() {
@@ -26,16 +26,13 @@ class ContactsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Implement controller count
-        return contactController.contacts.count
+        return contactController.contacts?.count ?? 0
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        // TODO: Implement display logic
-        
-        //Because currently the typoe is ANY we need to cast to Contact
-        let contact = contactController.contacts[indexPath.row] 
+        guard let contact = contactController.contacts?[indexPath.row] else {return cell}
         
         cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.relationship

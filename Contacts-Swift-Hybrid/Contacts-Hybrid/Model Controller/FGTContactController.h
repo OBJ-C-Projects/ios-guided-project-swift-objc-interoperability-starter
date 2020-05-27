@@ -8,15 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@class Contact;
+@class FGTContact;
 
-NS_ASSUME_NONNULL_BEGIN
+//Commented out to explicitly declare optional/null
+//NS_ASSUME_NONNULL_BEGIN
 
+//We can rename Objc class to match swift
+NS_SWIFT_NAME(ContactController)
 @interface FGTContactController : NSObject
 
 
-@property (nonatomic, readonly) NSArray<Contact *> *contacts;//Default to nil
+//nullable          [Contact]?
+//nonnull           [Contact]
+//null_resettable   [Contact]?
+//null_unspecified* [Contact]!
+
+@property (nonatomic, readonly, nullable) NSArray<FGTContact *> *contacts;//Default to nil
 
 @end
 
-NS_ASSUME_NONNULL_END
+//NS_ASSUME_NONNULL_END
