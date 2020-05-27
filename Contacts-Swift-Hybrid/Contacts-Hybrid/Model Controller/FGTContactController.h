@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FGTContactController : NSObject
+
+
+@property (nonatomic, readonly) NSArray<Contact *> *contacts;//Default to nil
 
 @end
 
